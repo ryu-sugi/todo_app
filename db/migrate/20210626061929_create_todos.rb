@@ -1,8 +1,8 @@
 class CreateTodos < ActiveRecord::Migration[6.0]
   def change
     create_table :todos do |t|
-      t.string :name
-      t.boolean :is_complete
+      t.string :name, null: false
+      t.boolean :is_complete, defalute:false, null:false
 
       t.timestamps
     end
